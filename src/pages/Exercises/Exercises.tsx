@@ -1,10 +1,7 @@
-type Exercise = {
-    name: string;
-    muscleGroup: string;
-    equipment: string;
-    difficulty: string;
-};
-const mockExercises: Exercise[] = [
+import type { TExercise } from '../../types/types';
+
+
+const mockExercises: TExercise[] = [
     { name: 'Жим штанги лёжа', muscleGroup: 'Грудь', equipment: 'Штанга', difficulty: 'Средний' },
     { name: 'Отжимания от пола', muscleGroup: 'Грудь', equipment: 'Без оборудования', difficulty: 'Начальный' },
     { name: 'Тяга верхнего блока', muscleGroup: 'Спина', equipment: 'Тренажёр', difficulty: 'Начальный' },

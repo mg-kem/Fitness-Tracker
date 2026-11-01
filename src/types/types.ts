@@ -12,6 +12,16 @@ export type TTrainingProgram = {
 };
 
 
+/**
+ * Каталог упражнений
+ */
+export type TExercise = {
+    name: string;
+    muscleGroup: string;
+    equipment: string;
+    difficulty: string;
+};
+
 /** type
  * Каталог упражнений
  */
