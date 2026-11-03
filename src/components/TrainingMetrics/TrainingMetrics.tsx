@@ -1,5 +1,5 @@
 import StatisticCard from '../StatisticCard';
-import { statCard } from '../../mock/mockData';
+import {statCard} from "../../mock/dashboardMock.ts";
 
 function TrainingMetrics() {
     return (

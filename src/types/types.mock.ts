@@ -12,7 +12,7 @@ type TProgramLevel = 'beginner' | 'intermediate' | 'advanced';
 
 /**
  * Типизация одного упражнения из каталога
-*/
+ */
 export type TExercise = {
     id: string;
     name: string;
@@ -55,4 +55,43 @@ export type TProgramExercise = {
     sets: number;
     reps: number;
     weight?: number;
+}
+
+export type TProgramDetails = TTrainingProgram & {
+    days: TProgramDays[]
+}
+
+export type TProgramDays = TTrainingDay & {
+    exercises: TExerciseUnionProgram[]
+}
+
+export type TExerciseUnionProgram = {
+    name: string,
+    muscleGroup: string,
+    difficulty: TExerciseDifficulty,
+    programExerciseId: string,
+    exerciseId: string,
+    trainingDayId: string,
+    sets: number,
+    reps: number,
+    weight?: number
+}
+
+/** type
+ * Карты статистики в dashboard
+ */
+export type TStaticCard = {
+    title: string;
+    value: number;
+}
+
+/** type
+ * Персональные тренировки пользователя (недавние активности)
+ */
+export type TPersonalTraining = {
+    id: number;
+    workoutName: string;
+    date: string;
+    exercisesCount: number;
+    duration: string;
 }

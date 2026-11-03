@@ -1,5 +1,5 @@
 import ActivityRow from '../ActivityRow';
-import { personalTraining } from '../../mock/mockData';
+import {personalTraining} from "../../mock/dashboardMock.ts";
 
 function RecentActivities() {
     return (
@@ -7,9 +7,9 @@ function RecentActivities() {
             <h2 className="recent-activities__title">Недавние активности</h2>
             {
                 personalTraining.length > 0 ? (
-                    <div className="recent-activities__table-wrapper">
-                        <table>
-                            <thead>
+                        <div className="recent-activities__table-wrapper">
+                            <table>
+                                <thead>
                                 <tr>
                                     <th scope="col">Тренировка</th>
                                     <th scope="col">Дата</th>
@@ -17,8 +17,8 @@ function RecentActivities() {
                                     <th scope="col">Длительность</th>
                                     <th scope="col" className="visually-hidden">Действия</th>
                                 </tr>
-                            </thead>
-                            <tbody>
+                                </thead>
+                                <tbody>
                                 {
                                     personalTraining.map(data => (
                                         <ActivityRow
@@ -31,16 +31,16 @@ function RecentActivities() {
                                     ))
                                 }
 
-                            </tbody>
-                        </table>
-                    </div>
-                ) :
+                                </tbody>
+                            </table>
+                        </div>
+                    ) :
                     (
                         <div className='recent-activities__empty'>Данных пока нет</div>
                     )
             }
 
-        </section >
+        </section>
     )
 }
 

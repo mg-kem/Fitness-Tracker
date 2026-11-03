@@ -361,10 +361,26 @@
     font-size: 0.9rem;
 }
 
+.programs-day + .programs-day {
+    margin-top: 20px;
+}
+
+.programs-day__title {
+    margin: 0;
+    padding: 12px 16px;
+    border-radius: 8px 8px 0 0;
+    background: #f5f5f5;
+    font-size: 1.1rem;
+}
+
 .programs-table-wrapper {
     overflow-x: auto;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+}
+
+.programs-day__title + .programs-table-wrapper {
+    border-radius: 0 0 8px 8px;
 }
 
 .programs-table {
