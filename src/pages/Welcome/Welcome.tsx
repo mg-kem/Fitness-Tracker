@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../const/const';
+import {getProgramDetails} from "../../services/programService.ts";
 
 function Welcome() {
+    getProgramDetails('pr-1');
     return (
         <main className="welcome-page">
             <header className="welcome-header">
